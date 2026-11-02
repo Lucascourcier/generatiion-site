@@ -1,0 +1,16 @@
+---
+layout: base.njk
+title: Notre équipe
+permalink: /notre-equipe/
+---
+<div class="wrap team-content">
+  <h1 class="visually-hidden">Notre équipe</h1>
+  <div class="team-heading"><h2>Les membres fondateurs</h2><img src="{{ '/assets/images/icon.png' | url }}" alt="" width="110" height="110"></div>
+  <div class="team-grid">
+    {% for member in team %}{% if member.group == "founders" %}{% include "member.njk" %}{% endif %}{% endfor %}
+  </div>
+  <h2 class="section-title">membres actifs</h2>
+  <div class="team-grid">
+    {% for member in team %}{% if member.group == "active" %}{% include "member.njk" %}{% endif %}{% endfor %}
+  </div>
+</div>

@@ -1,0 +1,11 @@
+---
+layout: base.njk
+article: true
+---
+<article class="article wrap">
+  <a class="back-link" href="{{ '/actu/' | url }}">← Le journal de bord</a>
+  <h1>{{ title | escape }}</h1>
+  {% if published %}<p class="article-date"><time datetime="{{ published | escape }}">{{ published | frenchDate }}</time></p>{% endif %}
+  {% if image %}<img class="article-cover" src="{{ image | url }}" alt="{{ imageAlt | escape }}" width="1200" height="800">{% endif %}
+  <div class="prose">{{ content | safe }}</div>
+</article>

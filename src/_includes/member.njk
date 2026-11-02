@@ -1,0 +1,6 @@
+<article class="team-member">
+  <img src="{{ ('/assets/images/' + member.image) | url }}" alt="{{ member.name }}" width="600" height="760" loading="lazy">
+  <blockquote><p>« {{ member.quote }} »</p></blockquote>
+  <h3>{{ member.name }}</h3>
+  {% if member.role %}<p class="member-role">{{ member.role }}</p>{% endif %}
+</article>

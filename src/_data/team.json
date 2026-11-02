@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Tefy RAFALIMANANA",
+    "role": "Président et fondateur historique",
+    "group": "founders",
+    "image": "tefy.png",
+    "quote": "Grandir entre deux pays, c’est finir par appartenir aux deux. Cette double culture n’est pas seulement une chance, c’est une responsabilité : celle de faire rayonner le talent de l’un sur la terre de l’autre et vice versa."
+  },
+  {
+    "name": "Jérémie HAVART",
+    "role": "Secrétaire général",
+    "group": "founders",
+    "image": "jeremie.png",
+    "quote": "Agir comme un catalyseur pour que l’art et la culture dépassent les frontières tout en accompagnant les talents, telle est la conviction qui m’a conduit à rejoindre l’association GENERATiiON."
+  },
+  {
+    "name": "Fandresena RAMBOARISON",
+    "role": "Trésorière",
+    "group": "founders",
+    "image": "fandresena.png",
+    "quote": "Madagascar comme source, la France comme écrin. Une fusion de culture rare, qui m’a poussé à rejoindre GENERATiiON afin de la révéler avec justesse."
+  },
+  {
+    "name": "Miora LACROIX",
+    "role": "",
+    "group": "active",
+    "image": "miora.jpeg",
+    "quote": "Passionnée par le développement et l’apprentissage, je m’engage à mettre mes compétences au service de projets à fort impact."
+  },
+  {
+    "name": "Salma PATRON",
+    "role": "",
+    "group": "active",
+    "image": "salma.png",
+    "quote": "J’adhère à l’association GENERATiiON car je crois profondément en la capacité de chaque individus. Ainsi, je veux contribuer à l’égalité des chances."
+  },
+  {
+    "name": "Camilles Le Moal",
+    "role": "",
+    "group": "active",
+    "image": "camilles.jpeg",
+    "quote": "J’ai rejoint GENERATiiON car l’association résonne avec mon intérêt pour l’art, la culture, et le milieu associatif. Elle me permet également de mobiliser mes compétences acquises lors de mon master en communication."
+  }
+]

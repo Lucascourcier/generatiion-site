@@ -1,0 +1,7 @@
+[
+  { "label": "Bienvenue", "url": "/" },
+  { "label": "Notre histoire", "url": "/about/" },
+  { "label": "Notre équipe", "url": "/notre-equipe/" },
+  { "label": "Actualités", "url": "/actu/" },
+  { "label": "Contact", "url": "/contact/" }
+]

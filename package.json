@@ -1,0 +1,19 @@
+{
+  "name": "generatiion-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Le site statique de l'association GENERATiiON",
+  "type": "module",
+  "scripts": {
+    "dev": "eleventy --serve --port=4321",
+    "clean": "node -e \"require('node:fs').rmSync('_site', { recursive: true, force: true })\"",
+    "build": "npm run clean && eleventy",
+    "test": "npm run build && node --test"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.2"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

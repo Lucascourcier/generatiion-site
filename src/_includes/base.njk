@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title | escape }} — {{ site.name }}</title>
+  <meta name="description" content="{{ (description or site.description) | escape }}">
+  <meta name="theme-color" content="#c05a3f">
+  <link rel="canonical" href="{{ site.origin }}{{ page.url | url }}">
+  <meta property="og:title" content="{{ title | escape }} — {{ site.name }}">
+  <meta property="og:description" content="{{ (description or site.description) | escape }}">
+  <meta property="og:type" content="{% if article %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ site.origin }}{{ page.url | url }}">
+  <meta property="og:image" content="{{ site.origin }}{{ '/assets/images/hero.jpeg' | url }}">
+  <link rel="icon" href="{{ '/assets/images/icon.png' | url }}" type="image/png">
+  <link rel="stylesheet" href="{{ '/assets/site.css' | url }}">
+  <script src="{{ '/assets/site.js' | url }}" defer></script>
+</head>
+<body{% if home %} class="home"{% endif %}>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header{% if overlay %} header-overlay{% endif %}">
+    <div class="header-inner">
+      <a class="brand" href="{{ '/' | url }}" aria-label="GENERATiiON — accueil">
+        <img src="{{ '/assets/images/logo.png' | url }}" alt="GENERATiiON, quand les générations s'inspirent" width="198" height="198">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" hidden>Menu <span aria-hidden="true">☰</span></button>
+      <nav id="navigation" aria-label="Navigation principale">
+        {% for item in navigation %}
+        <a href="{{ item.url | url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+        {% endfor %}
+      </nav>
+      <a class="button header-join" href="{{ '/contact/' | url }}">Nous rejoindre</a>
+    </div>
+  </header>
+  <main id="contenu" tabindex="-1">
+    {{ content | safe }}
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <nav aria-label="Navigation de bas de page">
+        {% for item in navigation %}<a href="{{ item.url | url }}">{{ item.label }}</a>{% endfor %}
+        <a href="{{ '/generatiion-mahay/' | url }}">GENERATiiON Mahay</a>
+      </nav>
+      <a href="mailto:adm@generatiion.org">Email</a>
+      <div class="footer-signature">
+        <img src="{{ '/assets/images/signature.png' | url }}" alt="GENERATiiON, association" width="300" height="77" loading="lazy">
+        <p>Copyright © {% currentYear %} GENERATiiON</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

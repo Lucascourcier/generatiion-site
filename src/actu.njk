@@ -1,0 +1,25 @@
+---
+layout: base.njk
+title: Actualités
+overlay: true
+permalink: /actu/
+---
+<section class="page-banner news-banner"><h1>notre actualité</h1></section>
+<section class="journal-intro wrap">
+  <h2>Le journal de bord</h2>
+  <p>Nous rêvons d’une génération consciente, engagée et solidaire.<br>Une génération qui ose apprendre. Une génération qui ose transmettre. Une génération qui ne laisse personne avancer seul. Bienvenue dans le journal de bord…</p>
+  <img src="{{ '/assets/images/hero.jpeg' | url }}" alt="Entre la France et Madagascar" width="1200" height="800" loading="lazy">
+</section>
+<section class="news-list wrap" aria-label="Articles">
+  {% for post in collections.news %}
+  <article class="news-item split">
+    <a href="{{ post.url | url }}" tabindex="-1" aria-hidden="true"><img src="{{ post.data.image | url }}" alt="" width="1024" height="800" loading="lazy"></a>
+    <div>
+      <h2><a href="{{ post.url | url }}">{{ post.data.title | escape }}</a></h2>
+      {% if post.data.published %}<p class="article-date"><time datetime="{{ post.data.published | escape }}">{{ post.data.published | frenchDate }}</time></p>{% endif %}
+      <p>{{ post.data.description | escape }}</p>
+      <a class="button button-outline" href="{{ post.url | url }}">Lire l’article<span class="visually-hidden"> : {{ post.data.title | escape }}</span></a>
+    </div>
+  </article>
+  {% endfor %}
+</section>

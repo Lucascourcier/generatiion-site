@@ -1,0 +1,83 @@
+---
+layout: base.njk
+title: Bienvenue
+home: true
+overlay: true
+---
+<section class="hero">
+  <div class="hero-content wrap">
+    <h2>Quand les générations s’inspirent</h2>
+    <h1>Association<br><strong>GENERATiiON</strong></h1>
+    <p>« le savoir transforme, l’éducation élève et la transmission change des vies »</p>
+    <a class="scroll-cue" href="#decouvrir" aria-label="Découvrir GENERATiiON"><span aria-hidden="true">⌄<br>⌄<br>⌄</span></a>
+  </div>
+</section>
+<section class="discovery" id="decouvrir" aria-label="Découvrir l'association">
+  <div class="feature-links wrap">
+    <a class="feature-link history-card" href="{{ '/about/' | url }}"><h2>1 / histoire</h2></a>
+    <a class="feature-link news-card" href="{{ '/actu/' | url }}"><h2>2 / actualités</h2></a>
+    <a class="feature-link team-card" href="{{ '/notre-equipe/' | url }}"><h2>3 / équipe</h2></a>
+  </div>
+</section>
+<section class="manifesto">
+  <div class="wrap">
+    <h2>Une structure dédiée à la valorisation des talents entre la France et Madagascar.</h2>
+    <p class="display-name">GENERATiiON</p>
+    <p>« Quand les générations s’inspirent. »</p>
+  </div>
+</section>
+<section class="program wrap split">
+  <a href="{{ '/generatiion-mahay/' | url }}" aria-label="Découvrir le concours GENERATiiON Mahay">
+    <img src="{{ '/assets/images/mahay.png' | url }}" alt="GENERATiiON Mahay spécial artisans" width="1024" height="1024" loading="lazy">
+  </a>
+  <div>
+    <h2>concours d’excellence</h2>
+    <p>GÉNÉRATiiON MAHAY spécial “artisans” est un programme annuel de détection et d’accompagnement dédié aux artisans d’exception de Madagascar. Porté par l’association GÉNÉRATiiON, ce projet identifie des talents rares pour les propulser sur le marché français.</p>
+    <a class="button" href="{{ '/generatiion-mahay/' | url }}">En savoir plus</a>
+  </div>
+</section>
+<section class="bridge">
+  <div class="wrap">
+    <div class="split bridge-row">
+      <div>
+        <p>GÉNÉRATiiON est une structure dédiée à la valorisation des talents malgaches entre la France et Madagascar.</p>
+        <p>Ici, nous croyons que :</p>
+        <ul class="beliefs">
+          <li>chaque parcours mérite d’être accompagné,</li>
+          <li>chaque talent mérite d’être révélé,</li>
+          <li>chaque culture mérite d’être valorisée.</li>
+        </ul>
+        <p>Être Malgache, en France ou ailleurs, ne doit jamais être un frein. Cela doit être une force.</p>
+      </div>
+      <h2>GENERATiiON :<br>une structure,<br>un pont</h2>
+    </div>
+    <div class="split bridge-row">
+      <h2>pourquoi<br>GENERATiiON ?</h2>
+      <div>
+        <p>Parce qu’une génération en inspire d’autres. Les deux « i » symbolisent <strong>deux cultures, deux générations qui se font face, se parlent et s’inspirent mutuellement</strong>. L’association est un pont qui célèbre la transmission du savoir, de l’art et de l’expérience.</p>
+        <a class="button button-outline" href="{{ '/about/' | url }}">→ Notre histoire</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% include "join.njk" %}
+<section class="gallery wrap" aria-label="La France et Madagascar en images">
+  {% for image, alt in [
+    ["hero.jpeg", "Promenade dans un champ de lavande"],
+    ["pareos.webp", "Textiles et savoir-faire malgaches"],
+    ["artisan.jpg", "Savoir-faire et transmission à Madagascar"],
+    ["madagascar.jpg", "Madagascar"],
+    ["terracotta.webp", "Terre aux couleurs de Madagascar"],
+    ["lavande.jpeg", "Rencontre entre deux cultures"],
+    ["rencontre.jpg", "La vie de l'association"]
+  ] %}
+  <a href="{{ ('/assets/images/' + image) | url }}" class="gallery-link" data-lightbox>
+    <img src="{{ ('/assets/images/' + image) | url }}" alt="{{ alt }}" width="600" height="400" loading="lazy">
+  </a>
+  {% endfor %}
+</section>
+<dialog class="lightbox" aria-label="Aperçu de la photo">
+  <button type="button" class="lightbox-close" aria-label="Fermer la photo">Fermer ×</button>
+  <img alt="" width="1200" height="800">
+  <p></p>
+</dialog>
